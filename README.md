@@ -1,5 +1,22 @@
 JPEG Archive [![Build Status](http://img.shields.io/travis/danielgtaylor/jpeg-archive.svg?style=flat)](https://travis-ci.org/danielgtaylor/jpeg-archive) [![Version](http://img.shields.io/badge/version-2.0.1-blue.svg?style=flat)](https://github.com/danielgtaylor/jpeg-archive/releases) [![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](http://dgt.mit-license.org/)
 ============
+
+This is a fork of jpeg-archive.
+
+The planned differences are:
+- Support for WebP
+- Support for JPEG2000
+- Support for PNG24
+- Support for pngquant (this one might require different algorithms since it's very sensitive to the type of image)
+
+And more in the future:
+- Given the same visual perceived quality for a given image, 
+return a list of the most efficient formats. 
+- ie. for a given input.png: 1) WebP 2) JPG2000 3) PNG8 4) JPG 5) PNG24
+
+============
+
+
 Utilities for archiving photos for saving to long term storage or serving over the web. The goals are:
 
  * Use a common, well supported format (JPEG)
