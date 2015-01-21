@@ -1,18 +1,22 @@
-JPEG Archive [![Build Status](http://img.shields.io/travis/danielgtaylor/jpeg-archive.svg?style=flat)](https://travis-ci.org/danielgtaylor/jpeg-archive) [![Version](http://img.shields.io/badge/version-2.0.1-blue.svg?style=flat)](https://github.com/danielgtaylor/jpeg-archive/releases) [![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](http://dgt.mit-license.org/)
+Image Recompress [![Build Status](http://img.shields.io/travis/danielgtaylor/jpeg-archive.svg?style=flat)](https://travis-ci.org/danielgtaylor/jpeg-archive) [![Version](http://img.shields.io/badge/version-2.0.1-blue.svg?style=flat)](https://github.com/danielgtaylor/jpeg-archive/releases) [![License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](http://dgt.mit-license.org/)
 ============
 
 This is a fork of jpeg-archive.
 
 The planned differences are:
+```
 - Support for WebP
 - Support for JPEG2000
 - Support for PNG24
 - Support for pngquant (this one might require different algorithms since it's very sensitive to the type of image)
+```
 
 And more in the future:
+```
 - Given the same visual perceived quality for a given image, 
 return a list of the most efficient formats. 
 - ie. for a given input.png: 1) WebP 2) JPG2000 3) PNG8 4) JPG 5) PNG24
+```
 
 ============
 
@@ -67,7 +71,7 @@ jpeg-archive
 jpeg-archive --quality medium --method smallfry
 ```
 
-### jpeg-recompress
+### image-recompress
 Compress JPEGs by re-encoding to the smallest JPEG quality while keeping _perceived_ visual quality the same and by making sure huffman tables are optimized. This is a __lossy__ operation, but the images are visually identical and it usually saves 30-70% of the size for JPEGs coming from a digital camera, particularly DSLRs. By default all EXIF/IPTC/XMP and color profile metadata is copied over, but this can be disabled to save more space if desired.
 
 There is no need for the input file to be a JPEG. In fact, you can use `jpeg-recompress` as a replacement for `cjpeg` by using PPM input and the `--ppm` option.
